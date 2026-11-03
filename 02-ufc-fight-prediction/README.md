@@ -10,16 +10,20 @@
 
 Trained on fights from April 2010 to December 2023, and tested on 1,528 fights from January 2024 to August 2026:
 
-| Method | Test accuracy |
-|---|---|
-| **Logistic regression (pre-fight features)** | **64.7%** (log loss 0.635, ROC AUC 0.693) |
-| Pick the better win rate | 60.1% |
-| Pick the younger fighter | 60.1% |
-| Pick the higher Elo rating | 58.4% |
-| Coin flip | 49.3% |
-| Pick the more experienced fighter | 45.6% |
+| Method | Test accuracy | Log loss | ROC AUC |
+|---|---|---|---|
+| **Improved logistic regression** (better Elo + recent form, career length, layoff flag) | **65.3%** | **0.629** | **0.706** |
+| Logistic regression (original features) | 64.7% | 0.635 | 0.693 |
+| Pick the better win rate | 60.1% | – | – |
+| Pick the younger fighter | 60.1% | – | – |
+| Pick the higher Elo rating | 58.4% | – | – |
+| Coin flip | 49.3% | – | – |
+| Pick the more experienced fighter | 45.6% | – | – |
 
-The model's probabilities are well calibrated. Elo rating and age have the largest effects.
+- **Confident predictions:** when the model gives a fighter at least a 70% chance (about 20% of fights), it is right 78.9% of the time. At 75% or higher, it is right 82.3% of the time.
+- **How improvements were chosen:** every change was selected with time-series cross-validation on the training years only, and the test set was used once. The gain over the original model is consistent across all metrics but small (McNemar p = 0.39).
+- **Better features beat more complex models:** gradient boosting and random forests did no better than logistic regression.
+- Elo rating and age have the largest effects, and the model's probabilities are well calibrated.
 
 ## Data problems found and fixed
 
@@ -39,5 +43,5 @@ The model's probabilities are well calibrated. Elo rating and age have the large
 6. Provenance, licence and ethics (*Kaggle source and licence still to add*)
 7. Data preparation (SQL view, standard divisions, one row per fighter per fight)
 8. Feature engineering (date-strict history, streaks, Elo rating with K chosen on training data)
-9. Modelling (red-corner fix, baselines, logistic regression, calibration, coefficients, leakage demonstration)
+9. Modelling (red-corner fix, baselines, logistic regression, calibration, coefficients, leakage demonstration, improving the model)
 10. Conclusion

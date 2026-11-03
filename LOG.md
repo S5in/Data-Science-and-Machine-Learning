@@ -42,5 +42,7 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
   - Found and fixed data problems: red corner listed as winner before April 2010 (fighter order randomised, corner never used), 2026 snapshot statistics (rebuilt from earlier fights only), early no-time-limit rules explaining the near-100% finish rate (analysis restricted to 2001+), zero-filled missing round statistics, messy weight classes, an impossible date of birth, and fights from other promotions in the data.
   - Engineered date-strict pre-fight features: record, win rate, streaks, Elo rating (K = 200, chosen on training data), striking, takedown and control rates, and age, height and reach.
   - Logistic regression reached 64.7% accuracy on 2024–2026 fights, against 60.1% for the best simple rule, with well-calibrated probabilities. The leaky snapshot model would have shown a misleading 70.7%.
+  - Improved the model, choosing every change on the training years only: a better Elo rating (margin of victory, layoff decay) plus recent form, career length and a long-layoff flag. Test accuracy rose to 65.3% (log loss 0.629, ROC AUC 0.706). Gradient boosting and random forests did no better than logistic regression.
+  - When the model is at least 70% confident (about a fifth of fights), it is right 78.9% of the time.
 - Next: add the Kaggle source and licence, and try the classification models covered later in the module on the same features.
 

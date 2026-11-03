@@ -1,4 +1,9 @@
-   .ipynb_checkpoints/
-   __pycache__/
-   .venv/
-   *.env
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+*.env
+
+# Extracted copies of the raw data (the originals stay in the zip files)
+*.csv
+*.json
+*.parquet

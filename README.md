@@ -1,3 +1,37 @@
-# Data-Science-and-Machine-Learning
-# Author
-Maksym Redchenko
+# Data Science & Machine Learning Portfolio
+
+**Author:** Maksym Redchenko · **Student number:** C00302240
+BSc (Hons) Software Development, SETU Carlow
+[LinkedIn](https://www.linkedin.com/in/maksym-redchenko) · [GitHub](https://github.com/S5in)
+
+A portfolio of data science and machine learning projects built on real, public data.
+
+## Projects
+
+| # | Project | Question | Status |
+|---|---|---|---|
+| 1 | [Irish Property Price Trends](01-irish-property-prices/) | How well can regression on past prices forecast Irish house price trends? | Draft complete |
+| 2 | UFC Fight Outcome Prediction | Can engineered pre-fight features predict fight winners better than a baseline? | Planned |
+
+## Repository structure
+
+```
+archive.zip                    Property Price Register data (CSV, JSON, Parquet)
+ufc_archive.zip                UFC fight data scraped from ufcstats.com
+01-irish-property-prices/      Project 1 notebook and notes
+LOG.md                         Weekly work log
+requirements.txt               Python packages needed
+```
+
+## How to run
+
+```
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Then open a project's notebook and use **Kernel → Restart & Run All**. The notebooks read the data straight from the zip files, so nothing needs to be extracted.
+
+## Technologies
+
+Python, pandas, NumPy, scikit-learn, matplotlib, Jupyter, Git/GitHub, and SQLite (planned for Project 2). See the portfolio specification for the reasons behind each choice.

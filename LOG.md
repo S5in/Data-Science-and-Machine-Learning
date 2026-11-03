@@ -30,5 +30,13 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
   - Models: naive baseline, linear regression, polynomial regression (degrees 1–7), Ridge and Lasso tuned with time-series cross-validation, and a log-linear growth model on the recovery period (2014+).
   - Result: high-degree polynomials overfit badly. The best models (Lasso degree 2 and the growth model) forecast the national median within about 2% (MAPE).
   - County-level growth models for the six largest counties: growth 5.5% (Dublin) to 10.1% (Limerick) a year. All counties grew slightly more slowly in 2024–2026 than their 2014–2023 trend.
-- Next: review feedback on the draft, then start Project 2 (UFC) with the SQLite database and pre-fight feature engineering.
+- Finished Project 1, adding the remaining topics from the lectures:
+  - Data understanding: compared the CSV, JSON and Parquet versions of the data (99 MB, 224 MB and 24 MB), recorded the licence (CC BY 4.0) and provenance, rated the data on the 5-star open data scale, and added a data quality summary.
+  - Ethics and privacy section (addresses dropped after cleaning, aggregated results only).
+  - Gaussian basis functions: fit the training data well but can't extrapolate.
+  - Multiple linear regression with month-of-year dummies: found a seasonal swing of about 5% and improved the best forecast to 1.8% MAPE. Interpreted the coefficients as % effects.
+  - Tested the share of new homes as a feature: it made forecasts worse, so it was left out.
+  - Added a Deployment section (CRISP-DM).
+- Started Project 2 (UFC): SQLite database and data understanding.
+- Next: review feedback on the draft, then pre-fight feature engineering for UFC.
 

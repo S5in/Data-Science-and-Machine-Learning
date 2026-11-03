@@ -10,8 +10,8 @@ A portfolio of data science and machine learning projects built on real, public 
 
 | # | Project | Question | Status |
 |---|---|---|---|
-| 1 | [Irish Property Price Trends](01-irish-property-prices/) | How well can regression on past prices forecast Irish house price trends? | Draft complete |
-| 2 | UFC Fight Outcome Prediction | Can engineered pre-fight features predict fight winners better than a baseline? | Planned |
+| 1 | [Irish Property Price Trends](01-irish-property-prices/) | How well can regression on past prices forecast Irish house price trends? | Complete |
+| 2 | [UFC Fight Outcome Prediction](02-ufc-fight-prediction/) | Can engineered pre-fight features predict fight winners better than a baseline? | In progress |
 
 ## Repository structure
 
@@ -19,6 +19,7 @@ A portfolio of data science and machine learning projects built on real, public 
 archive.zip                    Property Price Register data (CSV, JSON, Parquet)
 ufc_archive.zip                UFC fight data scraped from ufcstats.com
 01-irish-property-prices/      Project 1 notebook and notes
+02-ufc-fight-prediction/       Project 2 notebook (builds a SQLite database, ufc.db)
 LOG.md                         Weekly work log
 requirements.txt               Python packages needed
 ```
@@ -34,4 +35,4 @@ Then open a project's notebook and use **Kernel → Restart & Run All**. The not
 
 ## Technologies
 
-Python, pandas, NumPy, scikit-learn, matplotlib, Jupyter, Git/GitHub, and SQLite (planned for Project 2). See the portfolio specification for the reasons behind each choice.
+Python, pandas, NumPy, scikit-learn, matplotlib, Jupyter, Git/GitHub, and SQLite (Project 2). See the portfolio specification for the reasons behind each choice.

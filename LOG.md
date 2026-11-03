@@ -37,6 +37,10 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
   - Multiple linear regression with month-of-year dummies: found a seasonal swing of about 5% and improved the best forecast to 1.8% MAPE. Interpreted the coefficients as % effects.
   - Tested the share of new homes as a feature: it made forecasts worse, so it was left out.
   - Added a Deployment section (CRISP-DM).
-- Started Project 2 (UFC): SQLite database and data understanding.
-- Next: review feedback on the draft, then pre-fight feature engineering for UFC.
+- Project 2 (UFC):
+  - Built a SQLite database (6 normalised tables, keys and constraints, ETL conversions) and explored the data with SQL.
+  - Found and fixed data problems: red corner listed as winner before April 2010 (fighter order randomised, corner never used), 2026 snapshot statistics (rebuilt from earlier fights only), early no-time-limit rules explaining the near-100% finish rate (analysis restricted to 2001+), zero-filled missing round statistics, messy weight classes, an impossible date of birth, and fights from other promotions in the data.
+  - Engineered date-strict pre-fight features: record, win rate, streaks, Elo rating (K = 200, chosen on training data), striking, takedown and control rates, and age, height and reach.
+  - Logistic regression reached 64.7% accuracy on 2024–2026 fights, against 60.1% for the best simple rule, with well-calibrated probabilities. The leaky snapshot model would have shown a misleading 70.7%.
+- Next: add the Kaggle source and licence, and try the classification models covered later in the module on the same features.
 

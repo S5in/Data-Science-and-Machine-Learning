@@ -11,7 +11,7 @@ A portfolio of data science and machine learning projects built on real, public 
 | # | Project | Question | Status |
 |---|---|---|---|
 | 1 | [Irish Property Price Trends](01-irish-property-prices/) | How well can regression on past prices forecast Irish house price trends? | Complete |
-| 2 | [UFC Fight Outcome Prediction](02-ufc-fight-prediction/) | Can engineered pre-fight features predict fight winners better than a baseline? | In progress |
+| 2 | [UFC Fight Outcome Prediction](02-ufc-fight-prediction/) | Can engineered pre-fight features predict fight winners better than a baseline? | Complete |
 
 ## Repository structure
 

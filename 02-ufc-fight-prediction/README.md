@@ -2,7 +2,7 @@
 
 **Question:** Can engineered features built only from information known before a fight predict its winner better than a simple baseline?
 
-**Data:** fight statistics scraped from [ufcstats.com](http://www.ufcstats.com) on 11 August 2026. 11,441 fights from November 1993 to August 2026, 4,581 fighters and 25,131 rounds, including fights from older promotions (PRIDE, Strikeforce, WEC and others) that are listed on the site. The notebook reads it from `../ufc_archive.zip`.
+**Data:** fight statistics scraped from [ufcstats.com](http://www.ufcstats.com) on 11 August 2026. 11,441 fights from November 1993 to August 2026, 4,581 fighters and 25,131 rounds, including fights from older promotions (PRIDE, Strikeforce, WEC and others) that are listed on the site. Downloaded from Kaggle: [UFC DATASETS 1994-2026](https://www.kaggle.com/datasets/neelagiriaditya/ufc-datasets-1994-2025) by neelagiriaditya. The notebook reads it from `../ufc_archive.zip`.
 
 **Notebook:** [`ufc_fights.ipynb`](ufc_fights.ipynb) (HTML copy: `ufc_fights.html`). Running it creates `ufc.db`, a SQLite database (not committed, because it can be rebuilt).
 
@@ -40,8 +40,9 @@ Trained on fights from April 2010 to December 2023, and tested on 1,528 fights f
 3. Data infrastructure: SQLite database (ETL, schema, keys and constraints, verification)
 4. Data understanding with SQL (incl. rules eras, red-corner problem, leakage, promotions)
 5. Data quality summary
-6. Provenance, licence and ethics (*Kaggle source and licence still to add*)
+6. Provenance, licence and ethics
 7. Data preparation (SQL view, standard divisions, one row per fighter per fight)
 8. Feature engineering (date-strict history, streaks, Elo rating with K chosen on training data)
 9. Modelling (red-corner fix, baselines, logistic regression, calibration, coefficients, leakage demonstration, improving the model)
-10. Conclusion
+10. Deployment
+11. Conclusion

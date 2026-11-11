@@ -2,4 +2,7 @@ pandas>=2.0
 numpy
 matplotlib
 scikit-learn
+scipy
+pypdf
+openpyxl
 jupyter

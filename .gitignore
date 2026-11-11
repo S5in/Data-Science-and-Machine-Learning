@@ -7,6 +7,8 @@ __pycache__/
 *.csv
 *.json
 *.parquet
+# ...except the original RSA files for Project 3, which are only published as CSV for 2018-2019
+!03-nct-failure-prediction/data/nct_make_model_*.csv
 
 # Databases rebuilt by the notebooks
 *.db

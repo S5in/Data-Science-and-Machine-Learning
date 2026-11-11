@@ -47,3 +47,16 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
   - Added the Kaggle source and a Deployment section (CRISP-DM). Project 2 complete.
 - Next: prepare the week 12 presentation.
 
+## Week of 9 November 2026
+- Chose the last two projects: Project 3 (NCT failure prediction) and Project 4 (film recommender, MovieLens).
+- Project 3 (NCT):
+  - Downloaded the RSA Make and Model Data for all 13 test years (2013–2025) in three formats (PDF, CSV and Excel), plus the 2025 results by test centre.
+  - Built a loader that combines all years into one tidy table: header detection for spreadsheets, and regular-expression table extraction for PDFs, including wrapped model names. pdftotext silently dropped 133 rows from 2016, so I switched to pypdf, which recovers every row.
+  - Verified the combined data (no missing values, pass + fail = total, no duplicates) and cross-checked 2025 against the centre-level file (98.9% coverage, same fail rate).
+  - Applied a consistent privacy threshold (11+ cars) because the RSA's suppression rules changed in 2021 and 2025.
+  - Explored fail rates by age (21% at 4 years, about 68% at 18–20), test year (the 2020 COVID spike), make and failure category.
+  - Modelling: smoothed look-up baselines, logistic regression (brand and model ageing, year of birth, recency weighting) and a decision tree, tuned on 2024 and tested on 2025. Both models beat all baselines (group error about 4.1 against 5.0 percentage points) and are almost tied with each other.
+  - Age-adjusted brand ranking (Toyota and Honda best; Citroën, Vauxhall, Renault and Peugeot worst) and k-means clustering of failure profiles, with a hybrid group that almost never fails on emissions.
+  - Added a fail_probability() tool, a Deployment section and the conclusion.
+- Next: Project 4 (film recommender).
+

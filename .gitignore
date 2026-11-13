@@ -9,6 +9,8 @@ __pycache__/
 *.parquet
 # ...except the original RSA files for Project 3, which are only published as CSV for 2018-2019
 !03-nct-failure-prediction/data/nct_make_model_*.csv
+# ...and my own film ratings for Project 4
+!04-film-recommender/data/my_ratings.csv
 
 # Databases rebuilt by the notebooks
 *.db

@@ -13,6 +13,7 @@ A portfolio of data science and machine learning projects built on real, public 
 | 1 | [Irish Property Price Trends](01-irish-property-prices/) | How well can regression on past prices forecast Irish house price trends? | Complete |
 | 2 | [UFC Fight Outcome Prediction](02-ufc-fight-prediction/) | Can engineered pre-fight features predict fight winners better than a baseline? | Complete |
 | 3 | [NCT Failure Prediction](03-nct-failure-prediction/) | How likely is a car to fail its NCT, given its make, model and age? | Complete |
+| 4 | [Film Recommender](04-film-recommender/) | Can a recommender learn my taste from ratings and suggest films I'll like? | Complete |
 
 ## Repository structure
 
@@ -22,6 +23,7 @@ ufc_archive.zip                UFC fight data scraped from ufcstats.com
 01-irish-property-prices/      Project 1 notebook and notes
 02-ufc-fight-prediction/       Project 2 notebook (builds a SQLite database, ufc.db)
 03-nct-failure-prediction/     Project 3 notebook and the 13 yearly RSA files (data/)
+04-film-recommender/           Project 4 notebook, MovieLens zip and my ratings (data/)
 LOG.md                         Weekly work log
 requirements.txt               Python packages needed
 ```
@@ -33,7 +35,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Then open a project's notebook and use **Kernel → Restart & Run All**. Projects 1 and 2 read their data straight from the zip files, and Project 3 reads the RSA files in its `data/` folder, so nothing needs to be extracted.
+Then open a project's notebook and use **Kernel → Restart & Run All**. Projects 1, 2 and 4 read their data straight from zip files, and Project 3 reads the RSA files in its `data/` folder, so nothing needs to be extracted.
 
 ## Technologies
 

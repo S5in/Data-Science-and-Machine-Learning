@@ -58,5 +58,10 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
   - Modelling: smoothed look-up baselines, logistic regression (brand and model ageing, year of birth, recency weighting) and a decision tree, tuned on 2024 and tested on 2025. Both models beat all baselines (group error about 4.1 against 5.0 percentage points) and are almost tied with each other.
   - Age-adjusted brand ranking (Toyota and Honda best; Citroën, Vauxhall, Renault and Peugeot worst) and k-means clustering of failure profiles, with a hybrid group that almost never fails on emissions.
   - Added a fail_probability() tool, a Deployment section and the conclusion.
-- Next: Project 4 (film recommender).
-
+- Project 4 (film recommender):
+  - Downloaded MovieLens ml-latest-small (100,836 ratings, 610 users, 9,742 films) and listed 60 films I like in my_ratings.csv.
+  - Verified the data and built a sparse user × film matrix (98.3% empty; 1.2 MB sparse against 47.5 MB dense).
+  - Split each user's ratings by time (60/20/20) and evaluated top-10 lists with precision, recall, NDCG, hit rate, coverage and popularity.
+  - Compared most-popular, content-based (TF-IDF of genres and tags), item-based collaborative filtering, matrix factorisation written in NumPy (SGD) and PureSVD. PureSVD and item-based CF tied as best (NDCG 0.107 against 0.076 for most popular). Rating-prediction MF had good RMSE (0.889) but ranked poorly.
+  - Matched my films to MovieLens (51 of 60; 9 are newer than 2018) and produced personal recommendations with "because I liked" explanations.
+- Next: prepare the presentation (week of 30 November) and final checks before the 27 November deadline.

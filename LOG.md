@@ -24,6 +24,10 @@ Maksym Redchenko · Data Science & ML 1 CA portfolio. Updated at least weekly.
 - Findings so far: national median bottomed out in 2013 and rose 163% by 2026. Dublin is most expensive but grew least since 2013. The new-home premium widened from about 0% to about 50% after 2015.
 - Next: time-based train/test split and regression models.
 
+## Week of 26 October 2026
+- Reading week. No new code was committed this week; work on the draft resumed on 2–3 November (see next entry).
+- Status at the end of the week: Project 1 notebook covered data preparation and exploratory analysis; modelling, evaluation and the conclusion were still to do before the draft deadline (9am, 3 November).
+
 ## Week of 2 November 2026
 - Completed Project 1 for the draft portfolio submission:
   - Time-based train/test split: trained on 2010–2023, tested on January 2024 to September 2026.
